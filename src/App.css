@@ -1,0 +1,85 @@
+body, html {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(179,229,252 ,0.3);
+}
+
+#root {
+  width: 100%;
+}
+
+.app {}
+
+.app__btns {
+  height: 100px;
+  background: #1565C0;
+  border-bottom: 5px solid #0D47A1;
+}
+
+.app__editor {
+  height: 100%;
+  padding-bottom: 2.4em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app .markdown-body img {
+  max-width: 300px;
+}
+
+.markdown-body {
+  height: 100%;
+  overflow-y: scroll;
+  border: 1px solid rgba(0,0,0,.35);
+  padding: .5rem .75rem;
+  border-radius: .25rem;
+  background: #fff;
+}
+
+.markdown-body--empty {
+  position: relative;
+  overflow: visible;
+}
+
+.markdown-body--empty:before {
+  content: "Empty =(";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ccc;
+  font-size: 3em;
+}
+
+.editor__form,
+.markdown-body {
+  height: calc(100% - 100px);
+}
+
+.fa-columns--rotate {
+  transform: rotate(90deg);
+}
+
+.h100p {
+  height: 100%;
+}
+
+.btn--clear {
+  background: #e53935;
+  color: #fff;
+}
+
+.heading-title {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: .05em;
+  color: #43458b;
+  margin: 1em .5em .5em;
+}
