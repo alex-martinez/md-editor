@@ -129,24 +129,24 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app container-fluid h100p m-0">
-        <div className="row app__btns">
-          <div className="col-xs-12 h100p">
-            <div className="text-xs-center mt-2">
+      <div className="app container-fluid h-100 m-0">
+        <div className="row flex-items-xs-middle app__btns">
+          <div className="col-xs-12">
+            <div className="text-xs-center">
               <div className="btn-group btn-group-sm d-inline-block mr-1">
                 <button onClick={ () => this.buttonsFunctions('addBold') } type="button" className="btn btn-secondary"><i className="fa fa-bold"/></button>
-                <button onClick={ () => this.buttonsFunctions('addItalic') }type="button" className="btn btn-secondary"><i className="fa fa-italic"/></button>
+                <button onClick={ () => this.buttonsFunctions('addItalic') } type="button" className="btn btn-secondary"><i className="fa fa-italic"/></button>
                 {/*<button onClick={ () => this.buttonsFunctions('addUnderline') }type="button" className="btn btn-secondary"><i className="fa fa-underline"/></button>*/}
                 {/*<button onClick={ () => this.buttonsFunctions('addStrikethrough') }type="button" className="btn btn-secondary"><i className="fa fa-strikethrough"/></button>*/}
               </div>
 
               <div className="btn-group btn-group-sm d-inline-block mr-1">
-                <button onClick={ e => this.addHeading(1) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>1</button>
-                <button onClick={ e => this.addHeading(2) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>2</button>
-                <button onClick={ e => this.addHeading(3) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>3</button>
-                <button onClick={ e => this.addHeading(4) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>4</button>
-                <button onClick={ e => this.addHeading(5) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>5</button>
-                <button onClick={ e => this.addHeading(6) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>6</button>
+                <button onClick={ () => this.addHeading(1) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>1</button>
+                <button onClick={ () => this.addHeading(2) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>2</button>
+                <button onClick={ () => this.addHeading(3) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>3</button>
+                <button onClick={ () => this.addHeading(4) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>4</button>
+                <button onClick={ () => this.addHeading(5) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>5</button>
+                <button onClick={ () => this.addHeading(6) } type="button" className="btn btn-secondary"><i className="fa fa-header"/>6</button>
               </div>
 
               <div className="btn-group btn-group-sm d-inline-block mr-1">
@@ -171,12 +171,12 @@ class App extends Component {
           </div>
         </div>
 
-        <div className="row app__editor">
-          <div className="col-xs-12 col-md-6 h100p">
+        <div className="row app__editor h-100">
+          <div className="col-xs-12 col-md-6 h-100">
             <form onSubmit={ this.handleSubmit } className="editor__form">
               <div className="heading-title">Markdown</div>
               <textarea
-                className="form-control h100p"
+                className="form-control h-100"
                 value={ this.state.mdSource }
                 onChange={ this.handleChange }
                 ref={(input) => this.textareaElem = input}
@@ -184,9 +184,9 @@ class App extends Component {
             </form>
           </div>
 
-          <div className="col-xs-12 col-md-6 h100p">
+          <div className="col-xs-12 col-md-6 h-100">
             <div className="heading-title">Preview</div>
-            <div className={ `markdown-body${this.state.mdSource === '' ? ' markdown-body--empty' : ''}` }>
+            <div className={ `markdown-body ${this.state.mdSource === '' ? 'markdown-body--empty' : ''}` }>
               <ReactMarkdown
                 source={ this.state.mdSource }
                 escapeHtml={ true } />
