@@ -6,7 +6,7 @@ body {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  background: rgba(179,229,252 ,0.3);
+  background: #f8f9fa;
 }
 
 #root {
@@ -16,13 +16,12 @@ body {
 .app {}
 
 .app__btns {
+  padding: 1em;
   height: 100px;
-  background: #1565C0;
-  border-bottom: 5px solid #0D47A1;
+  background: #1862ab;
 }
 
 .app__editor {
-  height: 100%;
   padding-bottom: 2.4em;
   display: flex;
   flex-wrap: wrap;
@@ -33,7 +32,6 @@ body {
 }
 
 .markdown-body {
-  height: 100%;
   overflow-y: scroll;
   border: 1px solid rgba(0,0,0,.35);
   padding: .5rem .75rem;
@@ -59,15 +57,11 @@ body {
 
 .editor__form,
 .markdown-body {
-  height: calc(100% - 100px);
+  height: calc(100% - 110px);
 }
 
 .fa-columns--rotate {
   transform: rotate(90deg);
-}
-
-.h100p {
-  height: 100%;
 }
 
 .btn--clear {
@@ -80,6 +74,6 @@ body {
   font-size: 0.7em;
   font-weight: bold;
   letter-spacing: .05em;
-  color: #43458b;
+  color: #1862ab;
   margin: 1em .5em .5em;
 }
